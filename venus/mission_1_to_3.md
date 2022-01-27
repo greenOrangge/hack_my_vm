@@ -1,4 +1,4 @@
-> This can be found in https://hackmyvm.eu/venus/
+> This can be found [here](https://hackmyvm.eu/venus/)
 ```
 Host: venus.hackmyvm.eu
 
@@ -16,13 +16,13 @@ Pass: havefun!
 - after logging in:
 
 ## Mission 1
-![1](1.png)
+![1](images/1.png)
 - we can use the `ls` command to list the contents of the directory
 - `cat` is used the print the file contents as output
 - so the password is saved in a hidden file
 - let's try `ls -a` 
 	- the `-a` is used to list hidden files (read more about it using `man ls`)
-![2](2.png)
+![2](images/2.png)
 - We get the password for the next level!!
 - Now we have to login as sophia using the obtained password
 - we can use `su sophia`
@@ -31,7 +31,7 @@ Pass: havefun!
 - when we try `ls` we get a permission denied message
 - now let's go back a directory `cd ..` and ls
 - we can find many users, let's go to sophia
-![4](4.png)
+![4](images/4.png)
 - here we can find the flag and the next mission!
 
 ***
@@ -45,7 +45,7 @@ Pass: havefun!
 	- `-name` flag is used to specify name
 	- `-type f` us used to specify the type of files here `-f` mentions files, `-d` is used for directories
 	- `2>/dev/null` is a file descriptor used to dump all the errors and not diplay them in the output
-![5](5.png)
+![5](images/5.png)
 - now we can log in as angela and proceed to the next mission
 
 *** 
@@ -58,4 +58,4 @@ Pass: havefun!
 - `cat -n findme.txt  | grep "4069"`
 	- cat `-n` numbers all the output lines
 	- once the lines are numbered, we can `grep` them (check `man grep`)
-![6](6.png)
+![6](images/6.png)
