@@ -79,3 +79,59 @@ for letter_1 in letters:
 # Mission 36
 
 ![84](images/84.png)
+- `cat image` gives us a qr code, when i tried scanning it through my mobile, the qr was not getting recognized due to the `#` symbols
+- Now let's try changing those `#` symbols into blocks so that the qr can be scanned
+- First copy the qr and paste in on your local system and save the file
+``` python
+# Opening the file we saved which has the qr code, we use r to denote we are opening the file to read
+with open('[path_of_the_file]', 'r') as qr:
+    lines = qr.readlines()
+# we are reading line by line and replacing all the '#' symbols with a block google what (0x2588) is
+for l in lines:
+    print(l.replace('#', chr(0x2588)), end='')
+
+```
+- once we run this program we get a qr code which can be scanned by the phone, and we get the password for the next mission.
+
+***
+
+# Mission 37
+
+![85](images/85.png)
+- Let's try `strings music.iso`
+- And we get the password for the next level
+
+***
+
+# Mission 38
+
+![86](images/86.png)
+
+- We can use the `diff` command
+- it is used compare files line by line.
+`diff 1.txt 2.txt`
+- we get the password for the next mission
+
+***
+
+# Mission 39
+
+![87](images/87.png)
+
+- We have the private key `id_rsa.pem` , public key `id_rsa.pub`, and the encrypted file `pass.enc`
+- `openssl rsautl  -decrypt -inkey id_rsa.pem -in pass.enc `
+    - We us `openssl` to decrypt the files
+    - `rsautl` for encrypt and decrypt files with RSA keys
+    - `decrypt`
+- we get the password for the next mission
+
+***
+
+# Mission 40
+
+![88](images/88.png)
+- `cat wtf`
+- this seems like `morse code`
+- we can decode this using an online morse decoder
+
+***
