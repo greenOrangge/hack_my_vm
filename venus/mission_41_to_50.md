@@ -68,7 +68,8 @@
 - `find / -type f 2>/dev/null | grep "venus"`
 - the password we get here is not the password
 - We have to add a header to get the password
-- `curl -H "HOST:venus.hmv" http://localhost/` 
+- Let's try using curl
+- `curl venus.hmv` 
 
 ***
 
@@ -77,4 +78,20 @@
 ![100](images/100.png)
 - This seems like a hash of a password from the `$1$`
 - After a bit of googling, this seems to be a `MD5` hash
-- `john
+- `john file-path-to-hash --show`
+
+***
+
+# Mission 49
+
+![101](images/101.png)
+- After googling, it appears that DNS config files are stored in `/etc/bind` directory
+- `ls -l /etc/bind/`
+![102](images/102.png)
+
+***
+
+# Mission 50
+
+![103](images/103.png)
+- Hmmm.............
